@@ -1,3 +1,25 @@
-.title-bar-title {
-    background-color: blue;
+#search-bar {
+
+    text-align: center;
+    margin-left: 500px;
+    margin-top: 20px;
+    margin-bottom: 20px
+}
+
+.title {
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.subtitle {
+    text-align: center;
+}
+
+#search-bar {
+    width: 33%;
+}
+
+label {
+    padding: 10px;
 }
