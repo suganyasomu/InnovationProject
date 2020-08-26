@@ -1,9 +1,9 @@
 #search-bar {
 
     text-align: center;
-    margin-left: 500px;
     margin-top: 20px;
-    margin-bottom: 20px
+    margin-bottom: 20px;
+    margin-left: 500px;
 }
 
 .title {
@@ -16,10 +16,39 @@
     text-align: center;
 }
 
-#search-bar {
-    width: 33%;
-}
-
 label {
     padding: 10px;
+    padding: 10px;
+}
+
+#side-col {
+    margin-left: 300px;
+    text-align: center;
+}
+
+#main-col {
+    border-color: red;
+    margin-right: 300px;
+}
+
+.Job1-side {
+    border-color: red;
+
+}
+
+.Job1-main {
+    border-color: red;
+}
+
+.columns {
+    border: 1px solid red;
+}
+
+.column {
+    border: 1px solid blue;
+    width: 25%;
+}
+
+.row {
+    border: 1px solid green;
 }
