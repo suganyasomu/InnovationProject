@@ -12,7 +12,8 @@ $(document).ready(function () {
     var qualification = $("#qualification");
     var text4;
     var text5;
-    //Working API
+
+    // API called when the search button is clicked
     function search() {
         var position = enterPositionInput.val();
         var location = enterLocationInput.val();
@@ -40,7 +41,7 @@ $(document).ready(function () {
 
             for (var i = 0; i < response.SearchResult.SearchResultItems.length; i++) {
 
-                // if (response.SearchResult.SearchResultItems.length < 5) {
+
                 var positionTitle =
                     response.SearchResult.SearchResultItems[i].MatchedObjectDescriptor
                     .PositionTitle;
