@@ -3,12 +3,21 @@ body {
     background-color: #f5f5f5;
 }
 
+header {
+    height: 175px;
+}
+
+
 #search-bar {
 
     text-align: center;
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 500px;
+}
+
+#main {
+    height: 100vh;
 }
 
 .title {
@@ -66,5 +75,10 @@ button {
 }
 
 .footer {
-    position: absolute;
+    bottom: 0;
+    margin-bottom: 0 !important;
+}
+
+.is-3 {
+    cursor: pointer;
 }
