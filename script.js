@@ -124,6 +124,7 @@ $(document).ready(function () {
         });
     }
 
+    //Display details to the section
     function displayDetails() {
         $(".is-3").css("border-left", "0px").css("height", "300px");
         var text1 = $(this).find("p:nth-child(1)").text();
