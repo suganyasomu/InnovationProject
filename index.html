@@ -4,7 +4,6 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <link rel="stylesheet" href="style.css" />
     <title>Easy Job Search</title>
     <link
       rel="stylesheet"
@@ -14,20 +13,19 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <section class="hero is-info is-medium is-bold">
-    <div class="hero-body">
+
+  <body>
+    <header class="hero is-info is-medium is-bold">
       <div class="container">
-        <h1 class="title">
-          Easy Job Search
-        </h1>
+        <h1 class="title">Easy Job Search</h1>
         <h2 class="subtitle">
           Find the job you are looking for <strong>QUICKLY!</strong>!
         </h2>
       </div>
-    </div>
-  </section>
-  <body>
+    </header>
+
     <div class="field is-grouped has-addons" id="search-bar">
       <label class="label">Search Jobs</label>
       <div class="control">
@@ -54,12 +52,12 @@
       <button class="button is-info" id="submit">Search</button>
     </div>
 
-    <div class="contanier" id="main">
+    <div class="container" id="main">
       <aside id="browser">
         <div class="columns is-vcentered">
           <div class="column">
             <p class="bd-notification is-primary" id="info1"></p>
-            <button class="button is-link" id="link" style="display: none;">
+            <button class="button is-link" id="link" style="display: none">
               Apply
             </button>
             <p class="bd-notification is-primary" id="info2"></p>
@@ -67,7 +65,7 @@
         </div>
         <div class="columns is-vcentered">
           <div class="column">
-            <h1 id="qualification" style="display: none;">
+            <h1 id="qualification" style="display: none">
               Qualification Summary:
             </h1>
             <br />
@@ -75,31 +73,9 @@
           </div>
         </div>
       </aside>
-      <!-- 
-    <div class="field">
-      <div class="row" id="side-col">
-        <div class="column">hello1</div>
-        <div class="column">hello2</div>
-      </div>
-    </div> -->
-      <!-- <div class="columns is-vcentered" id="side-col"> -->
-      <!-- <div class="column is-3">
-        <p class="bd-notification is-primary">First column</p>
-      </div>
-      <div class="column">
-        <p class="bd-notification is-primary">
-          Second column with more content. This is so you can see the vertical
-          alignment.
-        </p>
-      </div>
-    </div>
-    <div class="columns is-vcentered">
-      <div class="column is-3">
-        <p class="bd-notification is-primary">First column</p>
-      </div> -->
     </div>
 
-    <!-- <footer class="footer notification is-info">
+    <footer class="footer notification is-info">
       <div class="content has-text-centered">
         <p>
           <strong>Bulma</strong> by
@@ -116,7 +92,7 @@
           <br />
         </p>
       </div>
-    </footer> -->
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="script.js"></script>
   </body>
