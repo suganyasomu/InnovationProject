@@ -10,17 +10,17 @@ $(document).ready(function () {
 
     var browser = $("#browser");
     var qualification = $("#qualification");
+    var rightCol1 = $("#rightCol1");
+    var rightCol2 = $("#rightCol2");
+    var backImg = $("#backImg");
+    var leftSection = $("#leftSection");
     var text4;
     var text5;
+    var position;
+    var location;
 
     // API called when the search button is clicked
-    function search() {
-        var position = enterPositionInput.val();
-        var location = enterLocationInput.val();
-        //var location = enterLocationInput.val();
-
-        console.log(position);
-        console.log(location);
+    function search(position, location) {
 
         var queryURL =
             "https://data.usajobs.gov/api/search?Keyword=" +
@@ -49,59 +49,62 @@ $(document).ready(function () {
                     response.SearchResult.SearchResultItems[i].MatchedObjectDescriptor
                     .OrganizationName;
 
-                var mainDiv = $("<div>");
-                mainDiv.addClass("columns is-vcentered");
-                mainDiv.css("border-radius", "10px");
+                if (i < 5) {
+                    var mainDiv = $("<div>");
+                    mainDiv.addClass("columns is-vcentered");
 
-                var divCard = $("<div>");
-                divCard.addClass("column is-3");
 
-                divCard.css("padding", "30px");
+                    var divCard = $("<div>");
+                    divCard.addClass("column is-3");
 
-                var divContent = $("<div>");
-                divContent.addClass("card-content");
 
-                var p1 = $("<p>").text("Position: " + positionTitle);
-                p1.addClass("card-header-title");
-                p1.css("font", "100");
 
-                var p2 = $("<p>").text("Location: " + LocationName);
-                p2.addClass("card-header-title");
-                p2.css("font", "100");
-                var p3 = $("<p>").text("Organization: " + organizationName);
-                p3.addClass("card-header-title");
-                p3.css("font", "100");
-                var p4 = $("<p>");
-                p4.addClass("card-header-title");
-                p4.attr(
-                    "data-value",
-                    response.SearchResult.SearchResultItems[i].MatchedObjectDescriptor
-                    .PositionURI
-                );
-                var p5 = $("<p>");
-                p5.addClass("card-header-title");
-                p5.attr(
-                    "data-qualify",
-                    response.SearchResult.SearchResultItems[i].MatchedObjectDescriptor
-                    .QualificationSummary
-                );
+                    var divContent = $("<div>");
+                    divContent.addClass("card-content");
 
-                divCard.append(divContent);
-                divContent.append(p1);
+                    var p1 = $("<p>").text("Position: " + positionTitle);
+                    p1.addClass("card-header-title");
 
-                divContent.append(p2);
-                divContent.append(p3);
-                divContent.append(p4);
-                divContent.append(p5);
 
-                mainDiv.append(divCard);
-                main.append(mainDiv);
-                divCard.css("text-align", "centre");
-                mainDiv.css("margin-left", "50px");
-                mainDiv.css("width", "30%");
-                mainDiv.css("border", "3px solid purple");
-                divCard.css("background-color", "#ffffff");
-                divCard.css("width", "100%");
+                    var p2 = $("<p>").text("Location: " + LocationName);
+                    p2.addClass("card-header-title");
+
+                    var p3 = $("<p>").text("Organization: " + organizationName);
+                    p3.addClass("card-header-title");
+
+                    var p4 = $("<p>");
+                    p4.addClass("card-header-title");
+                    p4.attr(
+                        "data-value",
+                        response.SearchResult.SearchResultItems[i].MatchedObjectDescriptor
+                        .PositionURI
+                    );
+                    var p5 = $("<p>");
+                    p5.addClass("card-header-title");
+                    p5.attr(
+                        "data-qualify",
+                        response.SearchResult.SearchResultItems[i].MatchedObjectDescriptor
+                        .QualificationSummary
+                    );
+
+                    divCard.append(divContent);
+                    divContent.append(p1);
+
+                    divContent.append(p2);
+                    divContent.append(p3);
+                    divContent.append(p4);
+                    divContent.append(p5);
+
+                    mainDiv.append(divCard);
+                    leftSection.append(mainDiv);
+
+                    mainDiv.css("margin-left", "50px");
+                    mainDiv.css("width", "70%");
+                    divCard.css("border", "4px light grey");
+
+
+
+                }
             }
 
             var position =
@@ -114,19 +117,29 @@ $(document).ready(function () {
 
             link.css("display", "inline-block");
             qualification.css("display", "inline-block");
+            rightCol1.css("display", "inline-block");
+            rightCol2.css("display", "inline-block");
+
             var summary =
                 response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor
                 .QualificationSummary;
 
+            var applyLink = response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor
+                .PositionURI;
+
             info1.text(position);
             info2.text(location);
             details.text(summary);
+            link.click(function () {
+                window.open(applyLink);
+            })
+            // window.open(text4);
         });
     }
 
     //Display details to the section
     function displayDetails() {
-        $(".is-3").css("border-left", "0px").css("height", "300px");
+        $(".is-3").css("border-left", "4px solid lightgray");
         var text1 = $(this).find("p:nth-child(1)").text();
         var text2 = $(this).find("p:nth-child(2)").text();
         text4 = $(this).find("p:nth-child(4)").attr("data-value");
@@ -136,9 +149,17 @@ $(document).ready(function () {
         $(info1).text(text1);
         $(info2).text(text2);
         $(details).text(text5);
-        $(this).css("border-left", "6px solid green").css("height", "300px");
+        $(this).css("border-left", "8px solid purple");
     }
-    $("#submit").on("click", search);
+
+    function getInput() {
+        position = enterPositionInput.val();
+        location = enterLocationInput.val();
+        leftSection.empty();
+        search(position, location);
+
+    }
+    $("#submit").on("click", getInput);
     $(document).on("click", ".is-3", displayDetails);
     $("#link").click(function () {
         window.open(text4);

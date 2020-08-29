@@ -17,65 +17,89 @@
   </head>
 
   <body>
-    <header class="hero is-info is-medium is-bold">
-      <div class="container">
-        <h1 class="title">Easy Job Search</h1>
-        <h2 class="subtitle">
-          Find the job you are looking for <strong>QUICKLY!</strong>!
-        </h2>
-      </div>
-    </header>
-
-    <div class="field is-grouped has-addons" id="search-bar">
-      <label class="label">Search Jobs</label>
-      <div class="control">
-        <i class="fas fa-map-marker-alt"></i>
-        <input
-          class="input"
-          type="text"
-          placeholder="Search Job Title"
-          id="enterInput"
+    <header class="hero is-info is-small is-bold">
+      <!-- <div class="container"> -->
+      <figure class="image is-128x128">
+        <img
+          class="is-rounded"
+          src="https://cdn2.f-cdn.com/contestentries/218364/123975/5556384708ebc_thumb900.jpg"
+          id="logo"
         />
-      </div>
+      </figure>
+      <h1 class="title">Easy Job Search</h1>
+      <h2 class="subtitle">
+        Find the job you are looking for <strong>QUICKLY!</strong>!
+      </h2>
+      <!-- </div> -->
+    </header>
+    <main>
+      <div class="wrapper">
+        <div class="field is-grouped has-addons" id="search-bar">
+          <label class="label">Search Jobs</label>
+          <div class="control">
+            <i class="fas fa-map-marker-alt"></i>
+            <input
+              class="input"
+              type="text"
+              placeholder="Search Job Title"
+              id="enterInput"
+            />
+          </div>
 
-      <div class="control">
-        <span>
-          <input
-            class="input"
-            type="text"
-            placeholder="Location"
-            id="searchLoc"
-          />
-        </span>
-      </div>
-      <div></div>
-      <button class="button is-info" id="submit">Search</button>
-    </div>
+          <div class="control">
+            <span>
+              <input
+                class="input"
+                type="text"
+                placeholder="Location"
+                id="searchLoc"
+              />
+            </span>
+          </div>
+          <div></div>
+          <button class="button is-info" id="submit">Search</button>
+        </div>
+        <div id="openModal" class="modalDialog">
+          <!-- <div>
+       <h2>Please enter a postion and location in the search area!</h2>
+      </div>-->
+        </div>
+        <!-- <div
+      style="
+        background-image: url('https://freepngimg.com/download/jobs/10-2-jobs-png-image.png');
+      "
+      id="backImg"
+    > -->
 
-    <div class="container" id="main">
-      <aside id="browser">
-        <div class="columns is-vcentered">
-          <div class="column">
-            <p class="bd-notification is-primary" id="info1"></p>
-            <button class="button is-link" id="link" style="display: none">
-              Apply
-            </button>
-            <p class="bd-notification is-primary" id="info2"></p>
+        <div class="container" id="main">
+          <aside id="browser">
+            <div class="columns is-vcentered">
+              <div class="column" id="rightCol1">
+                <p class="bd-notification is-primary" id="info1"></p>
+                <button class="button is-link" id="link" style="display: none">
+                  Apply
+                </button>
+                <p class="bd-notification is-primary" id="info2"></p>
+              </div>
+            </div>
+            <div class="columns is-vcentered" id="summary">
+              <div class="column" id="rightCol2">
+                <h1 id="qualification" style="display: none">
+                  Qualification Summary:
+                </h1>
+                <br />
+                <p class="bd-notification is-primary" id="details"></p>
+              </div>
+            </div>
+          </aside>
+          <div class="columns is-vcentered" id="cardDetails">
+            <div class="column" id="leftSection"></div>
           </div>
         </div>
-        <div class="columns is-vcentered">
-          <div class="column">
-            <h1 id="qualification" style="display: none">
-              Qualification Summary:
-            </h1>
-            <br />
-            <p class="bd-notification is-primary" id="details"></p>
-          </div>
-        </div>
-      </aside>
-    </div>
-
-    <footer class="footer notification is-info">
+      </div>
+      <!-- </div> -->
+    </main>
+    <footer class="footer notification is-info" id="footer">
       <div class="content has-text-centered">
         <p>
           <strong>Bulma</strong> by
