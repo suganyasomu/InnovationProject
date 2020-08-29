@@ -7,27 +7,11 @@ body {
 
 }
 
-.wrapper {
-    /* flex: 1; */
-    /* display: inline-block; */
-    /* justify-content: center; */
-    /* width: 100%; */
-    /* flex-shrink: 0;
-    flex-grow: 1; */
-
-    /* background-image: url("https://freepngimg.com/download/jobs/10-2-jobs-png-image.png"); */
-
-
-    /* height: 500px; */
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-
-}
+.wrapper {}
 
 #right {
     border: 1px solid red;
+
 }
 
 header {
@@ -109,6 +93,7 @@ button {
     margin-top: 10px;
     border-radius: 10px;
     display: none;
+    margin-bottom: 2px;
 }
 
 #rightCol2 {
