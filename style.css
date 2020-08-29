@@ -1,85 +1,74 @@
 /* mainbody */
 body {
-    background-color: #f5f5f5;
+  background-color: #f5f5f5;
 
-
-    /* opacity: 0.2; */
-
+  /* opacity: 0.2; */
 }
 
-.wrapper {}
+.wrapper {
+}
 
 #right {
-    border: 1px solid red;
-
+  border: 1px solid red;
 }
 
 header {
-    height: 200px;
+  height: 200px;
 }
 
-figure {}
+figure {
+}
 
 img {
-    width: 60% !important;
-    margin-left: 0px;
-    float: left;
-    margin-top: 40px;
+  width: 60% !important;
+  margin-left: 0px;
+  float: left;
+  margin-top: 40px;
 }
 
 #search-bar {
-    justify-content: center;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    padding-top: 20px;
-
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding-top: 20px;
 }
 
 .title {
-    text-align: center;
-    margin-right: 50px;
-    display: inline-block;
-
+  text-align: center;
+  margin-right: 50px;
+  display: inline-block;
 }
 
 .subtitle {
-    text-align: center;
-    padding: 0;
-    margin-bottom: 60px;
+  text-align: center;
+  padding: 0;
+  margin-bottom: 60px;
 }
-
 
 label {
-    padding: 10px;
+  padding: 10px;
 }
-
-
-
 
 aside {
-    float: right;
-    height: 100vh;
-    width: 60%;
+  float: right;
+  height: 100vh;
+  width: 60%;
 }
 
-
-
 button {
-    float: right;
+  float: right;
 }
 
 .column.is-3 {
-
-    cursor: pointer;
-    text-align: centre;
-    background-color: #ffffff;
-    width: 100%;
-    /* border: 8px solid gray(119, 116, 119); */
-    margin-bottom: 10px;
-    border-radius: 20px;
-    border: 4px solid lightgrey;
-    /* line-height: 300px; */
-
+  cursor: pointer;
+  text-align: centre;
+  background-color: #ffffff;
+  width: 100%;
+  /* border: 8px solid gray(119, 116, 119); */
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border: 4px solid lightgrey;
+  /* line-height: 300px; */
 }
 
 /* .column {
@@ -87,67 +76,61 @@ button {
 } */
 
 #rightCol1 {
-    border: 4px solid lightgray;
-    padding: 0;
-    background-color: white;
-    margin-top: 10px;
-    border-radius: 10px;
-    display: none;
-    margin-bottom: 2px;
+  border: 4px solid lightgray;
+  padding: 0;
+  background-color: white;
+  margin-top: 10px;
+  border-radius: 10px;
+  display: none;
+  margin-bottom: 2px;
 }
 
 #rightCol2 {
-    border: 4px solid lightgray;
+  border: 4px solid lightgray;
 
-    padding: 0;
-    background-color: white;
-    border-radius: 10px;
-    display: none;
-    margin-bottom: 50px;
+  padding: 0;
+  background-color: white;
+  border-radius: 10px;
+  display: none;
+  margin-bottom: 50px;
 }
 
 .card-header-title {
-    font-weight: 100;
+  font-weight: 100;
 }
 
 .bd-notification.is-primary {
-    padding: 10px;
+  padding: 10px;
 }
 
 #qualification {
-    margin-left: 10px;
-    font-weight: bolder;
+  margin-left: 10px;
+  font-weight: bolder;
 }
 
 #link {
-    margin-right: 10px;
+  margin-right: 10px;
 }
 
 #backImg {
-    background-size: cover;
+  background-size: cover;
 }
 
 #details {
-    text-justify: newspaper;
+  text-justify: newspaper;
 }
 
 #leftSection {
-
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 #summary {
-
-    margin-bottom: 50px;
-
+  margin-bottom: 50px;
 }
 
-
-
 #footer {
-    bottom: 0;
-    width: 100%;
-    margin-bottom: 0;
-    display: inline-block;
-
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 0;
+  display: inline-block;
 }
