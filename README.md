@@ -3,6 +3,7 @@
 Project name is a `Job search` that allows `users` to do `search for the job in particular location inside the united states`.
 
 ![Product Name Screen Shot][product-screenshot]
+![Product Name Screen Shot][product-screenshot2]
 
 ## Process
 
@@ -44,6 +45,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 <!-- MARKDOWN LINKS & IMAGES -->
 
 [product-screenshot]: Assets/JobSearch.png
+[product-screenshot2]: Assets/jobsearch2.JPG
 
 Deployed Links:
 Git hub :https://github.com/suganyasomu/InnovationProject
