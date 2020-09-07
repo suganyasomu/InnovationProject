@@ -51,5 +51,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 [product-screenshot2]: Assets/jobsearch2.JPG
 
 Deployed Links:
+
 Git hub :https://github.com/suganyasomu/InnovationProject
-deployed URL :https://suganyasomu.github.io/InnovationProject/
+
+Deployed URL :https://suganyasomu.github.io/InnovationProject/
