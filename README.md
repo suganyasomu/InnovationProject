@@ -1,6 +1,7 @@
 # Easy job Search
 
 Project name is a `Job search` that allows `users` to do `search for the job in particular location inside the united states`.
+
 Search Listing Screen:
 ![Product Name Screen Shot][product-screenshot]
 
