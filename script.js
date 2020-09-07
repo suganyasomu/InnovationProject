@@ -14,6 +14,7 @@ $(document).ready(function () {
     var rightCol2 = $("#rightCol2");
     var backImg = $("#backImg");
     var leftSection = $("#leftSection");
+    var openModal = $("#openModal");
     var text4;
     var text5;
     var position;
@@ -36,6 +37,11 @@ $(document).ready(function () {
             },
         }).then(function (response) {
             console.log(response);
+            console.log(response.SearchResult.SearchResultItems.length)
+            // if (response.SearchResult.SearchResultItems.length === 0) {
+            //     openModal.css("display", "inline-block");
+            // }
+
 
             for (var i = 0; i < response.SearchResult.SearchResultItems.length; i++) {
                 var positionTitle =
@@ -107,6 +113,7 @@ $(document).ready(function () {
                 }
             }
 
+
             var position =
                 response.SearchResult.SearchResultItems[0].MatchedObjectDescriptor
                 .PositionTitle;
@@ -134,8 +141,10 @@ $(document).ready(function () {
                 window.open(applyLink);
             })
             // window.open(text4);
+
         });
     }
+
 
     //Display details to the section
     function displayDetails() {

@@ -33,6 +33,7 @@
       <!-- </div> -->
     </header>
     <main>
+      <div class="hero"></div>
       <div class="wrapper">
         <div class="field is-grouped has-addons" id="search-bar">
           <label class="label">Search Jobs</label>
@@ -57,9 +58,10 @@
             </span>
           </div>
           <div></div>
-          <button class="button is-info" id="submit">Search</button>
+          <button class="button is-info" id="submit">Search</button> <br />
         </div>
-        <div id="openModal" class="modalDialog">
+        <div id="openModal" class="modalDialog" style="display: none">
+          <p id="results">No Results found</p>
           <!-- <div>
        <h2>Please enter a postion and location in the search area!</h2>
       </div>-->
